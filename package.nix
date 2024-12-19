@@ -133,7 +133,7 @@ let
         # For some reason, I can't do this with the redirect as I did above
         "--tmpfs /aws_sbin"
         "--ro-bind ${ipBin} /aws_sbin/ip"
-        "--symlink /sbin /aws_sbin"
+        "--symlink /aws_sbin /sbin"
       ];
 
       multiPkgs = _: with pkgs; [ openssl_1_1 icu70 ];
