@@ -131,7 +131,8 @@ let
         "--tmpfs /opt/awsvpnclient/Resources"
 
         # For some reason, I can't do this with the redirect as I did above
-        # "--tmpfs /sbin"
+        "--tmpfs /newroot"
+        "--tmpfs /sbin"
         "--ro-bind ${ipBin} /sbin/ip"
       ];
 
