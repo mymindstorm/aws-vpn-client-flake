@@ -131,9 +131,7 @@ let
         "--tmpfs /opt/awsvpnclient/Resources"
 
         # For some reason, I can't do this with the redirect as I did above
-        "--tmpfs /aws_sbin"
-        "--ro-bind ${ipBin} /aws_sbin/ip"
-        "--symlink /aws_sbin /sbin"
+        "--ro-bind ${ipBin} /usr/sbin/ip"
       ];
 
       multiPkgs = _: with pkgs; [ openssl_1_1 icu70 ];
